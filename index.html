@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prajakta Wani | Technology Lead &amp; Certified Scrum Master</title>
+<meta name="description" content="Technology Lead and Certified Scrum Master with 8+ years of experience, 50+ releases coordinated and client-facing web platforms for ABB, delivered through Infosys.">
+<style>
+:root{
+  --paper:#ffffff; --card:#ffffff; --ink:#1a1626; --muted:#5c5870; --teal:#1a1626; --deep:#f6f3ff;
+  --line:#e4e1ef; --gold:#6a3de8; --onaccent:#ffffff; --link:#5b2fd1; --chip:#f1edff;
+  --blob1:#cdbcff; --blob2:#e3d9ff; --shadow:rgba(60,30,140,.12);
+  --serif:'Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;
+  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0f0d18;--card:#17142a;--ink:#efecfa;--muted:#a8a3c2;--teal:#efecfa;--deep:#130f26;--line:#2a2644;--gold:#a78bfa;--onaccent:#1a1033;--link:#b9a4ff;--chip:#231f3d;--blob1:#4b2fb0;--blob2:#2a1d6e;--shadow:rgba(0,0,0,.4)}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 var(--sans)}
+a{color:var(--link)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:30}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 85%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:1.25rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem;font-size:.95rem}
+nav a{color:var(--ink);text-decoration:none;background:linear-gradient(var(--gold),var(--gold)) 0 100%/0 2px no-repeat;transition:background-size .25s}
+nav a:hover{background-size:100% 2px}
+nav .name{font-weight:700;margin-right:auto;background:none}
+
+/* hero */
+.heroband{position:relative;overflow:hidden;background:var(--deep);color:var(--ink)}
+.heroband::before,.heroband::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;animation:drift 18s ease-in-out infinite alternate}
+.heroband::before{width:28rem;height:28rem;background:var(--blob1);left:-8rem;top:-10rem}
+.heroband::after{width:24rem;height:24rem;background:var(--blob2);right:-6rem;bottom:-12rem;animation-duration:24s;opacity:.8}
+.grid{position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(106,61,232,.07) 0 1px,transparent 1px 64px),repeating-linear-gradient(0deg,rgba(106,61,232,.07) 0 1px,transparent 1px 64px)}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(4rem,3rem) scale(1.15)}}
+.hero{position:relative;display:grid;gap:2.5rem;grid-template-columns:1.1fr 1fr;align-items:center;padding-block:4.5rem 4rem}
+h1{font:700 clamp(2.8rem,7vw,4.6rem)/1 var(--serif);margin:0 0 1rem;letter-spacing:-.015em;color:var(--ink)}
+.headline{font:700 1rem/1.4 var(--sans);color:var(--gold);margin:0 0 1rem;max-width:34rem}
+.lead{font:1.3rem/1.5 var(--serif);margin:0 0 1.75rem;max-width:30rem;color:var(--muted)}
+.cta{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border:2px solid var(--teal);border-radius:4px;text-decoration:none;font-weight:600;color:var(--teal);transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px var(--shadow)}
+.heroband .btn{border-color:var(--ink);color:var(--ink)}
+.heroband .btn.primary,.btn.primary{background:var(--gold);border-color:var(--gold);color:var(--onaccent)}
+.runbook{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.4rem 1.5rem;box-shadow:0 14px 34px var(--shadow)}
+.runbook h2{font:700 1.15rem/1.3 var(--serif);margin:0 0 1rem;color:var(--ink)}
+.runbook ol{list-style:none;margin:0;padding:0;counter-reset:s}
+.runbook li{position:relative;counter-increment:s;padding:0 0 1rem 2.6rem;opacity:0;animation:step .6s ease forwards}
+.runbook li::before{content:counter(s);position:absolute;left:0;top:0;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--gold);color:var(--onaccent);font-weight:700;display:grid;place-items:center;font-size:.9rem}
+.runbook li::after{content:"";position:absolute;left:.88rem;top:1.9rem;bottom:.1rem;width:2px;background:var(--line)}
+.runbook li:last-child{padding-bottom:0}.runbook li:last-child::after{display:none}
+.runbook li:last-child::before{animation:pulse 2.2s ease-in-out 3.2s infinite}
+.runbook li:nth-child(1){animation-delay:.3s}.runbook li:nth-child(2){animation-delay:.9s}.runbook li:nth-child(3){animation-delay:1.5s}.runbook li:nth-child(4){animation-delay:2.1s}.runbook li:nth-child(5){animation-delay:2.7s}
+@keyframes step{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(106,61,232,.45)}50%{box-shadow:0 0 0 10px rgba(106,61,232,0)}}
+.runbook p{margin:1.1rem 0 0;font-size:.92rem;color:var(--muted)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:-2rem 0 0;position:relative}
+.stats div{background:var(--card);padding:1.1rem 1rem}
+.stats b{display:block;font:700 2rem/1.1 var(--serif);color:var(--gold)}
+.stats div>span{font-size:.88rem;color:var(--muted)}
+
+section{padding:3rem 0 1rem}
+h2.sec{font:700 1.9rem/1.2 var(--serif);margin:0 0 1.1rem;color:var(--teal)}
+h2.sec::after{content:"";display:block;width:3rem;height:3px;background:var(--gold);margin-top:.5rem;transition:width .6s}
+.in h2.sec::after{width:6rem}
+section p{max-width:44rem;margin:0 0 1rem}
+
+/* range + journey */
+.range{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:stretch}
+.range .col{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.3rem 1.4rem;transition:transform .25s,box-shadow .25s}
+.range .col:hover{transform:translateY(-3px);box-shadow:0 12px 26px var(--shadow)}
+.range h3{font:700 1.5rem/1.2 var(--serif);margin:0 0 .2rem;color:var(--ink)}
+.range .sub{color:var(--muted);font-size:.9rem;margin:0 0 .8rem}
+.range ul{margin:0;padding-left:1.1rem}.range li{margin:.45rem 0}
+.bridge{display:grid;place-items:center}
+.bridge span{width:3rem;height:3rem;border-radius:50%;background:var(--gold);color:var(--onaccent);display:grid;place-items:center;font:700 1.7rem/1 var(--serif)}
+.rangenote{margin-top:1.2rem;font:1.15rem/1.55 var(--serif);max-width:44rem}
+.journey{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;position:relative}
+.journey::before,.journey::after{content:"";position:absolute;left:0;top:.62rem;height:2px;width:100%}
+.journey::before{background:var(--line)}
+.journey::after{background:var(--gold);transform-origin:left;transition:transform 1.8s ease .2s}
+.js .journey::after{transform:scaleX(0)}
+.js .in .journey::after{transform:scaleX(1)}
+.journey li{position:relative;padding-top:2.1rem}
+.journey li::before{content:"";position:absolute;left:0;top:.05rem;width:1.3rem;height:1.3rem;border-radius:50%;background:var(--card);border:3px solid var(--gold);z-index:1}
+.journey li.next::before{background:var(--gold)}
+.journey time{display:block;font-weight:700;color:var(--gold);font-size:.9rem}
+.journey strong{display:block;font:700 1.05rem/1.3 var(--serif)}
+.journey p{font-size:.92rem;margin:.3rem 0 0;color:var(--muted)}
+
+/* work */
+.work{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.work li{position:relative;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.2rem 1.3rem;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.work li::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--gold);transition:width .35s}
+.work li:hover{transform:translateY(-4px);box-shadow:0 12px 26px var(--shadow)}
+.work li:hover::before{width:100%}
+.work strong{font:700 1.15rem/1.3 var(--serif);display:block}
+.work .role{display:inline-block;margin:.45rem 0 .6rem;padding:.1rem .6rem;border-radius:99px;background:var(--chip);font-size:.8rem;color:var(--muted)}
+.work p{margin:0 0 .5rem;font-size:.95rem}
+.note{color:var(--muted);font-size:.93rem;margin-top:1.1rem}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:8px;padding:1.2rem 1.3rem;position:relative}
+blockquote::before{content:"\201C";position:absolute;right:.9rem;top:-.1rem;font:700 4rem/1 var(--serif);color:var(--gold);opacity:.35}
+blockquote p{font:1.05rem/1.55 var(--serif);margin:0 0 .8rem}
+blockquote footer{font-size:.88rem;color:var(--muted);border:0;padding:0}
+
+/* skills */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 2rem}
+.skills h3{font:700 1rem/1.3 var(--sans);margin:0 0 .5rem;color:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.chips li{background:var(--chip);border-radius:99px;padding:.2rem .7rem;font-size:.86rem;transition:transform .15s,background .15s}
+.chips li:hover{transform:translateY(-2px);background:var(--gold);color:var(--onaccent)}
+.certs{margin:0;padding-left:1.2rem}
+
+footer.site{border-top:1px solid var(--line);margin-top:3rem;padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.9rem}
+
+/* reveal (only when JS is running) */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+.js .work li.rv:nth-child(2n){transition-delay:.1s}
+
+@media (max-width:820px){
+  .range{grid-template-columns:1fr}.bridge span{width:2.4rem;height:2.4rem;font-size:1.3rem}
+  .journey{grid-template-columns:1fr;gap:1.4rem;padding-left:1.8rem}
+  .journey::before{left:.62rem;top:0;width:2px;height:100%}.journey::after{display:none}
+  .journey li{padding-top:0}.journey li::before{left:-1.8rem;top:.1rem}
+  .hero{grid-template-columns:1fr;padding-block:3rem 3.5rem}
+  .stats{grid-template-columns:repeat(2,1fr)}.stats div:last-child{grid-column:span 2}
+  .work,.quotes,.skills{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .runbook li{opacity:1}.js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<nav aria-label="Main"><div class="wrap">
+  <span class="name">Prajakta Wani</span>
+  <a href="#about">About</a><a href="#journey">Journey</a><a href="#work">Work</a><a href="#feedback">Feedback</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</div></nav>
+
+<div class="heroband">
+  <div class="grid" aria-hidden="true"></div>
+  <header class="wrap hero">
+    <div>
+      <h1>Prajakta Wani</h1>
+      <p class="headline">Technology Lead | Certified Scrum Master | Release Management &amp; Business Analysis Support</p>
+      <p class="lead">A strong technical background, 8+ years in IT and a drive to learn delivery management in depth.</p>
+      <div class="cta">
+        <a class="btn primary" href="Prajakta_Wani_Resume.pdf">Download resume</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <aside class="runbook" aria-labelledby="rb">
+      <h2 id="rb">How I run a release</h2>
+      <ol>
+        <li>Plan the release with the client and the teams involved.</li>
+        <li>Support User Acceptance Testing (UAT) and resolve defects as they appear.</li>
+        <li>Coordinate development, support and DevOps.</li>
+        <li>Prepare a rollback plan with a time estimate and steps.</li>
+        <li>Support go-live and verify the release in production.</li>
+      </ol>
+      <p>Complex releases run about two days. Sitefinity platform upgrades are among them.</p>
+    </aside>
+  </header>
+</div>
+
+<main class="wrap">
+  <div class="stats rv" aria-label="Key numbers">
+    <div><b><span class="count" data-to="8">8</span>+</b><span>years in IT</span></div>
+    <div><b><span class="count" data-to="50">50</span>+</b><span>releases coordinated</span></div>
+    <div><b><span class="count" data-to="10">10</span>+</b><span>major releases</span></div>
+    <div><b><span class="count" data-to="20">20</span>%</b><span>higher sprint velocity</span></div>
+    <div><b><span class="count" data-to="4">4</span>+</b><span>years on the ABB account</span></div>
+  </div>
+
+  <section id="about" class="rv">
+    <h2 class="sec">About</h2>
+    <p>I have 8+ years in IT, including 2 years leading a 6-member Agile team and onsite client delivery in the UK from March 2023 to June 2025. At Infosys, I have worked on the ABB account since 2022, on both new requirements and maintenance, with new features and upgrades shipping twice a month.</p>
+    <p>Process improvements raised sprint velocity by 20%, with 100% sprint completion. On the analysis side, I support Business Analysts with requirements, Business Requirements Documents (BRDs), process flows and acceptance criteria, take part in UAT and write functional and technical documentation for delivered tools. I have trained backend developers to take on frontend tasks and review all frontend pull requests, through a review process that controls release risk before changes reach production. As sole UI owner on several ABB tools, I also handled communication with the ABB business units that requested them, from first request to release.</p>
+  </section>
+
+  <section id="range" class="rv">
+    <h2 class="sec">Technical depth, delivery leadership</h2>
+    <div class="range">
+      <div class="col">
+        <h3>Build</h3><p class="sub">Hands-on frontend on a Sitefinity platform, next to a .NET Core backend team</p>
+        <ul>
+          <li>Sole UI owner of four public ABB calculators</li>
+          <li>35% faster pages (lazy loading, Grunt minification and bundling)</li>
+                    <li>Razor (.cshtml), SCSS, jQuery and JavaScript</li>
+        </ul>
+      </div>
+      <div class="bridge" aria-hidden="true"><span>+</span></div>
+      <div class="col">
+        <h3>Lead</h3><p class="sub">Scrum, releases and people, in a client-facing setting</p>
+        <ul>
+          <li>Scrum Master for a 6-member team: 100% sprint completion</li>
+          <li>50+ releases coordinated, 10+ of them major</li>
+          <li>Built team capability: trained 2 .NET Core developers in frontend work and review every frontend change before release</li>
+          <li>About 25% fewer client-reported issues and change requests after a defined quality and release process</li>
+          <li>BRDs and UAT support, with Azure DevOps AI for user stories</li>
+        </ul>
+      </div>
+    </div>
+    <p class="rangenote">I write the code, review it, plan the release and handle client communication. What I’m building towards is formal team leadership and delivery ownership across projects, learned in depth on top of that technical credibility.</p>
+  </section>
+
+  <section id="journey" class="rv">
+    <h2 class="sec">A versatile path</h2>
+    <ol class="journey">
+      <li><time>Dec 2013</time><strong>Front-End Developer</strong><p>Rheal Software Solutions. Responsive templates and cross-browser testing.</p></li>
+      <li><time>Jan 2019</time><strong>Frontend Developer</strong><p>Aaroh Services. 12+ responsive websites, client requirements, 3 parallel projects.</p></li>
+      <li><time>Apr 2022</time><strong>Technology Analyst</strong><p>Infosys, ABB account. Scrum, UAT, requirements support and releases, including onsite in the UK.</p></li>
+      <li class="next"><time>Jan 2026</time><strong>Technology Lead</strong><p>Mentoring, pull request review and release planning. Heading into delivery management.</p></li>
+    </ol>
+  </section>
+
+  <section id="work" class="rv">
+    <h2 class="sec">Selected work for ABB</h2>
+    <ul class="work">
+      <li class="rv">
+        <strong>Marine CO₂e Calculator</strong><span class="role">Sole UI owner, end-to-end client communication</span>
+        <p>Public web calculator for ABB Marine. Usage analytics are built into every calculator. Enquiries through this page led to 2–3 marine parts orders reported by the client.</p><a href="https://new.abb.com/marine/co2e-calculator">View the live tool</a>
+      </li>
+      <li class="rv">
+        <strong>Energy Savings Calculator</strong><span class="role">Sole UI owner, end-to-end client communication</span>
+        <p>Calculator in ABB’s energy efficiency and circularity services.</p><a href="https://new.abb.com/service/service/motion/energy-efficiency-and-circularity/energy-savings-calculator">View the live tool</a>
+      </li>
+      <li class="rv">
+        <strong>Turbine-to-Electric CO₂ Savings Calculator</strong><span class="role">Sole UI owner, end-to-end client communication</span>
+        <p>Calculator for ABB Drives.</p><a href="https://new.abb.com/drives/turbine-to-electric-co2-savings-calculator">View the live tool</a>
+      </li>
+      <li class="rv">
+        <strong>OmniCore Calculator</strong><span class="role">Sole UI owner, end-to-end client communication</span>
+        <p>Calculator for ABB Robotics OmniCore controllers.</p><a href="https://new.abb.com/products/robotics/controllers/omnicore/omnicore-calculator">View the live tool</a>
+      </li>
+      <li class="rv">
+        <strong>Product detail page redesign</strong><span class="role">Contributor</span>
+        <p>Redesign of the ABB product page template.</p><a href="https://new.abb.com/products/pl/7GSP018683R0001/4nwa1012583">View an example page</a>
+      </li>
+      <li class="rv">
+        <strong>Search results page redesign</strong><span class="role">Contributor</span>
+        <p>Redesign of the ABB site search results.</p><a href="https://new.abb.com/search/pl/results">View the live page</a>
+      </li>
+    </ul>
+    <p class="note">This is a selection. I have delivered more web tools and pages on the ABB platform, built on Sitefinity with Razor (.cshtml), HTML, SCSS and jQuery, alongside a .NET Core backend team. The calculators earned direct appreciation from the ABB business units that requested them, with feedback that they supported sales and customer reach. Usage analytics are built into every calculator and into the product and search pages.</p>
+  </section>
+
+  <section id="feedback" class="rv">
+    <h2 class="sec">What colleagues say</h2>
+    <div class="quotes">
+      <blockquote class="rv">
+        <p>“Having someone who can naturally connect the business and technical worlds is incredibly valuable.”</p>
+        <footer>Business Analyst, ABB engagement</footer>
+      </blockquote>
+      <blockquote class="rv">
+        <p>“Often, you’ve already identified it, thought through possible solutions, and come prepared with recommendations.”</p>
+        <footer>Business Analyst, ABB engagement</footer>
+      </blockquote>
+      <blockquote class="rv">
+        <p>“I particularly appreciate your ownership mindset and your willingness to take on challenges.”</p>
+        <footer>Delivery Manager, ABB</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="skills" class="rv">
+    <h2 class="sec">Skills and certifications</h2>
+    <div class="skills">
+      <div><h3>Agile and Scrum</h3><ul class="chips"><li>Sprint planning</li><li>Daily Scrum</li><li>Review</li><li>Retrospectives</li><li>Backlog refinement</li><li>User stories</li><li>Sprint velocity</li></ul></div>
+      <div><h3>Delivery management</h3><ul class="chips"><li>Release planning</li><li>Cross-team coordination</li><li>Stakeholder management</li><li>Client communication</li><li>Rollback planning</li><li>Code review</li><li>Technical mentoring</li><li>AI-assisted user stories (Azure DevOps)</li></ul></div>
+      <div><h3>Business analysis</h3><ul class="chips"><li>Requirements gathering</li><li>BRDs</li><li>Process flows</li><li>Acceptance criteria</li><li>UAT</li><li>Functional and technical documentation</li></ul></div>
+      <div><h3>UX/UI</h3><ul class="chips"><li>UI development</li><li>UX principles</li><li>Responsive design</li><li>Cross-browser compatibility</li></ul></div>
+      <div><h3>Frontend development</h3><ul class="chips"><li>Razor (.cshtml)</li><li>HTML5</li><li>CSS3</li><li>SCSS</li><li>JavaScript</li><li>jQuery</li><li>Grunt</li><li>Lazy loading</li><li>Minification and bundling</li><li>Bootstrap</li><li>React (trained)</li></ul></div>
+      <div><h3>Tools</h3><ul class="chips"><li>Jira</li><li>Azure DevOps</li><li>Sitefinity (incl. Sitefinity Insights)</li><li>Analytics event tracking (dataLayer)</li><li>Git</li></ul></div>
+      <div><h3>Certifications</h3><ul class="certs"><li>Professional Scrum Master™ I (PSM I), Scrum.org</li><li>Professional Scrum Master™ AI Essentials, Scrum.org</li></ul></div>
+    </div>
+  </section>
+
+  <section id="contact" class="rv">
+    <h2 class="sec">Contact</h2>
+    <p>Open to Scrum Master, delivery management and technical business analyst roles. The quickest way to reach me is by email or LinkedIn.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:pkwani12@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/prajaktawani">LinkedIn</a>
+      <a class="btn" href="https://github.com/PrajaktaNWANI">GitHub</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">© 2026 Prajakta Wani. ABB pages and tools linked here belong to ABB; I delivered them through Infosys.</div></footer>
+
+<script>
+(function(){
+  var d=document, reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar=d.getElementById('bar');
+  function prog(){var h=d.documentElement;var m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?h.scrollTop/m*100:0)+'%';}
+  window.addEventListener('scroll',prog,{passive:true});prog();
+  if(reduce||!('IntersectionObserver' in window)) return;
+  d.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);
+      e.target.querySelectorAll&&e.target.querySelectorAll('.count').forEach(count);}
+  });},{threshold:.15});
+  d.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  function count(el){
+    if(el.dataset.done) return; el.dataset.done=1;
+    var to=+el.dataset.to,t0=null,dur=1200;
+    function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);}
+    el.textContent='0';requestAnimationFrame(step);
+  }
+})();
+</script>
+</body>
+</html>
